@@ -1,0 +1,681 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="edge">
+        
+        <title>CS:GO Powerball</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/simplebar.css">
+        <script src="js/main.js"></script>
+        <script src="js/simplebar.js"></script>
+        <script src="https://use.fontawesome.com/9a9bf76504.js"></script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="logo" class="header">
+                <a href="#"><img src="img/logo.png"></a>
+            </div>
+            <nav id="navigation" class="header">
+                <a class="active" href="#">
+                    <img class="icon" src="img/jackpot.svg"><span>Jackpot</span>
+                </a>
+                <a href="#">
+                    <img class="icon" src="img/coinflip.svg"><span>Coin Flip</span>
+                </a>
+                <a href="#">
+                    <i class="fa fa-history fa-gradient"></i><span>History</span>
+                </a>
+            </nav>
+            <div id="user" class="header">
+                <div id="user-controls">
+                    <i class="fa fa-moon-o fa-lg button"></i><i class="fa fa-volume-up fa-lg button"></i>
+                </div>
+                <div id="user-menu" class="button">
+                    <img class="avatar" src="img/user-avatar1.png">
+                    <span class="username">Despawned</span>
+                </div>
+            </div>
+            <div id="powerball-main" data-simplebar>
+                <div id="chat-max-button" class="button chat-max">⌵</div>
+                <div id="game-container">
+                    <canvas id="game-canvas" width="375" height="375">
+                    </canvas><br>
+                    <span>30 items</span><br>
+                    <span><i class="fa fa-clock-o"></i> 1:40</span><br>
+                    <span>$0.90</span>
+                </div>
+                <div id="deposit-button" class="button">
+                    Deposit
+                </div>
+                <div class="skin red st">
+                    <img src="img/karambit.png"><br>
+                    Karambit<br>Doppler
+                </div>
+                <div class="skin yellow">
+                    <img src="img/m4a4.png"><br>
+                    M4A4<br>Howl
+                </div>
+                <div class="skin blue">
+                    <img src="img/glock-18.png"><br>
+                    Glock-18<br>Candy Apple
+                </div>
+                <div class="skin red st">
+                    <img src="img/karambit.png"><br>
+                    Karambit<br>Doppler
+                </div>
+                <div class="skin yellow">
+                    <img src="img/m4a4.png"><br>
+                    M4A4<br>Howl
+                </div>
+                <div class="skin blue">
+                    <img src="img/glock-18.png"><br>
+                    Glock-18<br>Candy Apple
+                </div>
+                <div class="skin red st">
+                    <img src="img/karambit.png"><br>
+                    Karambit<br>Doppler
+                </div>
+                <div class="skin yellow">
+                    <img src="img/m4a4.png"><br>
+                    M4A4<br>Howl
+                </div>
+                <div class="skin blue">
+                    <img src="img/glock-18.png"><br>
+                    Glock-18<br>Candy Apple
+                </div>
+                <div class="skin red st">
+                    <img src="img/karambit.png"><br>
+                    Karambit<br>Doppler
+                </div>
+                <div class="skin yellow">
+                    <img src="img/m4a4.png"><br>
+                    M4A4<br>Howl
+                </div>
+                <div class="skin blue">
+                    <img src="img/glock-18.png"><br>
+                    Glock-18<br>Candy Apple
+                </div>
+                <div class="skin red st">
+                    <img src="img/karambit.png"><br>
+                    Karambit<br>Doppler
+                </div>
+                <div class="skin yellow">
+                    <img src="img/m4a4.png"><br>
+                    M4A4<br>Howl
+                </div>
+                <div class="skin blue">
+                    <img src="img/glock-18.png"><br>
+                    Glock-18<br>Candy Apple
+                </div>
+                <div class="skin red st">
+                    <img src="img/karambit.png"><br>
+                    Karambit<br>Doppler
+                </div>
+                <div class="skin yellow">
+                    <img src="img/m4a4.png"><br>
+                    M4A4<br>Howl
+                </div>
+                <div class="skin blue">
+                    <img src="img/glock-18.png"><br>
+                    Glock-18<br>Candy Apple
+                </div>
+            </div>
+            <div id="bet-history" data-simplebar>
+                <div id="user-deposit">
+                    You've deposited <span class="color-text">0 items</span> in this round.<br>
+                    Probability to win: <span class="color-text">0%</span>
+                </div>
+                <div class="round-bets">
+                    <div class="bet turquoise open">
+                        <img class="avatar av-small" src="img/user-avatar2.png">
+                        <div class="bet-info">
+                            <span class="username">BoB</span> placed <span class="color-text">7 skins</span> valued at <span class="color-text">$0.30</span>.
+                            <div class="bet-skins">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bet purple">
+                        <img class="avatar av-small" src="img/user-avatar3.png">
+                        <div class="bet-info">
+                            <span class="username">caLy</span> placed <span class="color-text">7 skins</span> valued at <span class="color-text">$0.30</span>.
+                            <div class="bet-skins">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bet violet">
+                        <img class="avatar av-small" src="img/user-avatar3.png">
+                        <div class="bet-info">
+                            <span class="username">caLy</span> placed <span class="color-text">7 skins</span> valued at <span class="color-text">$0.30</span>.
+                            <div class="bet-skins">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-round-info">
+                        <span class="round-header">New Round</span><br>
+                        Round hash:<br>
+                        <span class="color-text">b5cc22e20e601cb3510ffd446d533076</span>
+                    </div>
+                </div>
+                <div class="round-bets">
+                    <div class="round-results">
+                        <div class="winner">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span> has won this round valued at <span class="color-text">$0.90</span>
+                        </div>
+                        Winning ticket found at 11.255721554809295% with secret f8b3b1613b20158c5613a1b734dfc9918d450ff5<br>
+                        <a class="color-text" href="#">(Verify)</a>
+                    </div>
+                    <div class="bet turquoise open">
+                        <img class="avatar av-small" src="img/user-avatar2.png">
+                        <div class="bet-info">
+                            <span class="username">BoB</span> placed <span class="color-text">7 skins</span> valued at <span class="color-text">$0.30</span>.
+                            <div class="bet-skins">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bet purple">
+                        <img class="avatar av-small" src="img/user-avatar3.png">
+                        <div class="bet-info">
+                            <span class="username">caLy</span> placed <span class="color-text">7 skins</span> valued at <span class="color-text">$0.30</span>.
+                            <div class="bet-skins">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bet violet">
+                        <img class="avatar av-small" src="img/user-avatar3.png">
+                        <div class="bet-info">
+                            <span class="username">caLy</span> placed <span class="color-text">7 skins</span> valued at <span class="color-text">$0.30</span>.
+                            <div class="bet-skins">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-round-info">
+                        <span class="round-header">New Round</span><br>
+                        Round hash:<br>
+                        <span class="color-text">b5cc22e20e601cb3510ffd446d533076</span>
+                    </div>
+                </div>
+				               <div class="round-bets">
+                    <div class="round-results">
+                        <div class="winner">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span> has won this round valued at <span class="color-text">$0.90</span>
+                        </div>
+                        Winning ticket found at 11.255721554809295% with secret f8b3b1613b20158c5613a1b734dfc9918d450ff5<br>
+                        <a class="color-text" href="#">(Verify)</a>
+                    </div>
+                    <div class="bet turquoise open">
+                        <img class="avatar av-small" src="img/user-avatar2.png">
+                        <div class="bet-info">
+                            <span class="username">BoB</span> placed <span class="color-text">7 skins</span> valued at <span class="color-text">$0.30</span>.
+                            <div class="bet-skins">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bet purple">
+                        <img class="avatar av-small" src="img/user-avatar3.png">
+                        <div class="bet-info">
+                            <span class="username">caLy</span> placed <span class="color-text">7 skins</span> valued at <span class="color-text">$0.30</span>.
+                            <div class="bet-skins">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bet violet">
+                        <img class="avatar av-small" src="img/user-avatar3.png">
+                        <div class="bet-info">
+                            <span class="username">caLy</span> placed <span class="color-text">7 skins</span> valued at <span class="color-text">$0.30</span>.
+                            <div class="bet-skins">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                                <img class="skin" src="img/skin.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-round-info">
+                        <span class="round-header">New Round</span><br>
+                        Round hash:<br>
+                        <span class="color-text">b5cc22e20e601cb3510ffd446d533076</span>
+                    </div>
+                </div>
+            </div>
+            <div id="chat">
+                <div id="chat-box">
+                    <div id="chat-header">
+                        <i class="fa fa-users fa-gradient"></i> 452 Online
+                        <div id="chat-min-button" class="button chat-min">⌵</div>
+                    </div>
+                    <div id="chat-container" data-simplebar>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar2.png">
+                            <span class="username">BoB</span><br>
+                            <span class="message-text">Wow dat luck ?!</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar3.png">
+                            <span class="username">caLy</span><br>
+                            <span class="message-text">Hahaha rip $100</span>
+                            <span class="timestamp">14:52</span>
+                        </div>
+                        <div class="message">
+                            <img class="avatar av-small" src="img/user-avatar1.png">
+                            <span class="username admin">Despawned</span><br>
+                            <span class="message-text">What's up noobs !</span>
+                            <span class="timestamp">14:53</span>
+                        </div>
+                    </div>
+                    <div id="message-box">
+                        <input id="chat-input" type="text" placeholder="Type your message...">
+                        <i class="fa fa-paper-plane fa-gradient button"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
